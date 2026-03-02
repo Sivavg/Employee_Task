@@ -30,26 +30,26 @@ export default function EmployeeList() {
 
     return (
         <div className="flex flex-col h-full bg-transparent relative">
-            <div className="flex items-center justify-between mb-8 flex-shrink-0">
-                <h2 className="text-[28px] font-bold text-[#1E293B] tracking-tight">Employee</h2>
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6 md:mb-8 flex-shrink-0">
+                <h2 className="text-[24px] md:text-[28px] font-bold text-[#1E293B] tracking-tight">Employee</h2>
 
-                <div className="flex items-center gap-4">
-                    <div className="relative">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 w-full md:w-auto">
+                    <div className="relative w-full sm:w-auto">
                         <Search className="w-4 h-4 absolute left-4 top-1/2 transform -translate-y-1/2 text-[#94A3B8]" />
                         <input
                             type="text"
                             placeholder="Search"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
-                            className="pl-11 pr-4 py-[10px] border border-[#E2E8F0] rounded-lg focus:outline-none focus:border-primary bg-white w-72 text-sm text-[#000]"
+                            className="pl-11 pr-4 py-[10px] border border-[#E2E8F0] rounded-lg focus:outline-none focus:border-primary bg-white w-full sm:w-72 text-sm text-[#000]"
                         />
                     </div>
                     <button
                         onClick={() => navigate('/employee/add')}
-                        className="bg-[#0A84FF] hover:bg-blue-600 text-white px-5 py-[10px] rounded-lg flex items-center gap-2 font-medium transition-colors text-sm"
+                        className="bg-[#0A84FF] hover:bg-blue-600 text-white px-5 py-[10px] rounded-lg flex items-center justify-center gap-2 font-medium transition-colors text-sm w-full sm:w-auto"
                     >
                         <Plus className="w-[18px] h-[18px]" strokeWidth={2.5} />
-                        Add New Employee
+                        <span className="whitespace-nowrap">Add New Employee</span>
                     </button>
                 </div>
             </div>

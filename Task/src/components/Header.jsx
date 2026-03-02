@@ -1,9 +1,15 @@
-import { Settings, Bell } from 'lucide-react';
+import { Settings, Bell, Menu } from 'lucide-react';
 
-export default function Header() {
+export default function Header({ onMenuClick }) {
     return (
-        <header className="h-[72px] bg-white border-b border-[#E8ECEF] flex items-center justify-end px-12 flex-shrink-0">
-            <div className="flex items-center gap-4">
+        <header className="h-[72px] bg-white border-b border-[#E8ECEF] flex items-center justify-between md:justify-end px-4 md:px-12 flex-shrink-0">
+            <button
+                onClick={onMenuClick}
+                className="md:hidden w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center text-[#64748B] hover:bg-[#E2E8F0] transition-colors"
+            >
+                <Menu className="w-[20px] h-[20px]" />
+            </button>
+            <div className="flex items-center gap-2 md:gap-4">
                 <button className="w-10 h-10 rounded-full bg-[#F1F5F9] flex items-center justify-center text-[#64748B] hover:bg-[#E2E8F0] transition-colors">
                     <Settings className="w-[20px] h-[20px]" />
                 </button>

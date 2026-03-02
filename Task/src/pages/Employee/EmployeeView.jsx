@@ -23,11 +23,11 @@ export default function EmployeeView() {
 
     return (
         <div className="flex flex-col h-full bg-white">
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-2 md:gap-4 mb-4">
                 <button onClick={() => navigate('/employee')} className="p-1 hover:bg-gray-100 rounded-lg transition-colors text-textMain">
                     <ChevronLeft className="w-6 h-6" strokeWidth={2.5} />
                 </button>
-                <h2 className="text-[26px] font-bold text-textMain tracking-tight">View Employee Details</h2>
+                <h2 className="text-[22px] md:text-[26px] font-bold text-textMain tracking-tight">View Employee Details</h2>
             </div>
 
             <div className="flex-1 mt-6">
